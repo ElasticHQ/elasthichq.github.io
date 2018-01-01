@@ -18,7 +18,7 @@ $(document).ready(function() {
   var animationDuration = 5000;
   /*Time interval to change the slides in milliseconds.
    * Change the interval as you like */
-  var animationInterval = 8000;
+  var animationInterval = 7000;
   
   //Changes slide in the given time interval.
   function changeSlide() {
