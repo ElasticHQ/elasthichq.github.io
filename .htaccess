@@ -1,0 +1,22 @@
+RewriteEngine On
+
+
+#RewriteCond %{HTTP_HOST} !^www\.elastichq\.org$
+#RewriteRule (.*) http://www.elastichq.org/$1 [R=301,L]
+
+# rewrite to dynamically add g-analytics to footer.
+#RewriteCond %{REQUEST_URI} ^/app/index\.html$
+#RewriteRule (.*) http://www.elastichq.org/app/index\.php [R=301,L]
+
+
+<filesMatch "\.(html|htm|js|css)$">
+FileETag None
+<ifModule mod_headers.c>
+Header unset ETag
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+</ifModule>
+</filesMatch>
+
+DirectoryIndex index.php index.html
