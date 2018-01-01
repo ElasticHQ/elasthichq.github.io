@@ -1,0 +1,223 @@
+body {
+    padding-top: 0px;
+    padding-bottom: 60px;
+}
+
+/* Custom container */
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.container > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    margin: 60px 0 0 0;
+    text-align: center;
+}
+
+.jumbotron h1 {
+    font-size: 100px;
+    line-height: 1;
+}
+
+.jumbotron .lead {
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.masthead-links {
+    list-style: none outside none;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.masthead-links li {
+    color: #005580;
+    display: inline;
+    padding: 0 10px;
+}
+
+.masthead-links a {
+    color: #0088cc;
+}
+
+.marketing p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 10px 0 20px 0;
+}
+
+.marketing h2 {
+    padding-bottom: 8px;
+    margin: 18px 0 27px;
+    border-bottom: 1px solid #eee;
+}
+
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+/* Customize the navbar links to be fill the entire space of the .navbar *//*
+
+.navbar .navbar-inner {
+    padding: 0;
+}
+
+.navbar .nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+}
+
+.navbar .nav li {
+    display: table-cell;
+    width: 1%;
+    float: none;
+}
+
+.navbar .nav li a {
+    font-weight: bold;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, .75);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+.navbar .nav li:first-child a {
+    border-left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.navbar .nav li:last-child a {
+    border-right: 0;
+    border-radius: 0 3px 3px 0;
+}
+*/
+
+/* Social proof buttons from GitHub & Twitter */
+.bs-docs-social {
+    padding: 15px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-top: 25px;
+}
+
+/* Quick links on Home */
+.bs-docs-social-buttons {
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.bs-docs-social-buttons li {
+    display: inline-block;
+    padding: 5px 8px;
+    line-height: 1;
+    *display: inline;
+    *zoom: 1;
+}
+
+/* Tweak navbar brand link to be super sleek
+-------------------------------------------------- */
+
+body > .navbar {
+    font-size: 13px;
+}
+
+/* Change the docs' brand */
+body > .navbar .brand {
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 20px;
+    float: right;
+    font-weight: bold;
+    color: #000;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .125);
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+body > .navbar .brand:hover {
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .4);
+}
+
+/* Sections
+-------------------------------------------------- */
+
+/* padding for in-page bookmarks and fixed navbar */
+section {
+    padding-top: 30px;
+}
+
+section > .page-header,
+section > .lead {
+    color: #5a5a5a;
+}
+
+section > ul li {
+    margin-bottom: 5px;
+}
+
+/* Separators (hr) */
+.bs-docs-separator {
+    margin: 40px 0 39px;
+}
+
+/* Faded out hr */
+hr.soften {
+    height: 1px;
+    margin: 70px 0;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+    border: 0;
+}
+
+.section-header {
+    padding-bottom: 8px;
+    margin: 18px 0 27px;
+    border-bottom: 1px solid #eee;
+}
+
+
+.stats td
+{
+    font-size: larger;
+}
+.stats td.max
+{
+    font-weight: bold;
+    /*color: green;*/
+    text-align: right;
+}
+
+.stats td.avg
+{
+    font-weight: normal;
+    /*color: green;*/
+    text-align: right;
+}
+
+.center-table {
+    margin: 0 auto !important;
+    float: none !important;
+}
+
