@@ -1,2 +1,1 @@
-# elasthichq.github.io
-ElasticHQ Website
+#ElasticHQ Website
