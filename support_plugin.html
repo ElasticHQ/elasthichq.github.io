@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ElasticHQ - ElasticSearch monitoring and management application.">
+    <meta name="author" content="Roy Russo">
+    <title>ElasticHQ Support - Plugin Installation - ElasticSearch monitoring and management application.</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type='text/css'>
+    <!-- Bootstrap responsive -->
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type='text/css'>
+    <!-- Fontawesome -->
+    <link href="css/font-awesome.css" rel="stylesheet" type='text/css'>
+    <!--  -->
+    <link href="css/elastichq.css" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-ie7.min.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar
+   ================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="features.html">Features</a>
+                    </li>
+                    <li class="">
+                        <a href="gettingstarted.html" class="">Get Started</a>
+                    </li>
+                    <li class="active">
+                        <a href="support.html" class="">Support</a>
+                    </li>
+                    <li class="">
+                        <a href="blog/" class="">Blog</a>
+                    </li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li><a href="https://groups.google.com/d/forum/elastichq" target="_blank"><i
+                            class="icon-comments-alt"></i> Community</a></li>
+                    <li><a href="https://github.com/royrusso/elasticsearch-HQ" target="_blank"><i
+                            class="icon-github"></i> GitHub Project</a></li>
+                    <!--  <a class="btn btn-success" href="https://github.com/royrusso/elasticsearch-HQ"><i
+                              class="icon-github icon-large"></i> Star us on GitHub</a>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <h1>ElasticHQ Plugin Installation Instructions</h1>
+    <hr/>
+    <div class="row-fluid">
+        <div class="span12">
+            <ol>
+                <li>Navigate to your /bin directory and type: <code>plugin -install
+                    royrusso/elasticsearch-HQ</code>
+
+                    <img style="padding:10px 0;" src="img/plugin1.png"/>
+                    <br/>
+
+                    <div class="alert alert-warning">Warning! Remember to check for compatible versions and install the
+                        correct one. <a href="https://github.com/royrusso/elasticsearch-HQ#version-compatibility"
+                                        target="_blank">More Info</a>
+                    </div>
+                </li>
+                <li>Point your browser to <code>/domain:port/_plugin/hq/</code></li>
+                <li>The cluster location url field should already be filled in with your server address. Simply
+                    hit the connect button to initiate connection.
+                </li>
+                <li>Optional: You can always verify the installation, by navigating to <code>/elasticsearchinstalldirectory/plugins/</code>
+                    and verifying there is an <code>hq</code> directory.</code></li>
+            </ol>
+
+            <div class="alert alert-info">Tip: Case is important. Older version will be located at /HQ, where newer version reside in /hq.
+            </div>
+
+
+            <hr>
+
+            <div class="footer">
+                <p></p>
+            </div>
+
+            <div class="text-center" style="color:#999999;">
+                <small>
+                    &copy; Razorback, LLC 2013. All Rights Reserved.
+                    <br/>
+                    This website and accompanying ElasticHQ software is not affiliated with ElasticSearch, Inc.
+                </small>
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-40876494-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+</body>
+</html>

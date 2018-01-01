@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ElasticHQ - ElasticSearch monitoring and management application.">
+    <meta name="author" content="Roy Russo">
+    <title>ElasticHQ Support - ElasticSearch monitoring and management application.</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type='text/css'>
+    <!-- Bootstrap responsive -->
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type='text/css'>
+    <!-- Fontawesome -->
+    <link href="css/font-awesome.css" rel="stylesheet" type='text/css'>
+    <!--  -->
+    <link href="css/elastichq.css" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-ie7.min.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar
+   ================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="features.html">Features</a>
+                    </li>
+                    <li class="">
+                        <a href="gettingstarted.html" class="">Get Started</a>
+                    </li>
+                    <li class="active">
+                        <a href="support.html" class="">Support</a>
+                    </li>
+                    <li class="">
+                        <a href="blog/" class="">Blog</a>
+                    </li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li><a href="https://groups.google.com/d/forum/elastichq" target="_blank"><i
+                            class="icon-comments-alt"></i> Community</a></li>
+                    <li><a href="https://github.com/royrusso/elasticsearch-HQ" target="_blank"><i
+                            class="icon-github"></i> GitHub Project</a></li>
+                    <!--  <a class="btn btn-success" href="https://github.com/royrusso/elasticsearch-HQ"><i
+                              class="icon-github icon-large"></i> Star us on GitHub</a>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <h1>Support</h1>
+    <hr/>
+    <div class="row-fluid">
+        <div class="span6">
+            <h2>Comments / Questions?</h2>
+
+            <p>The ElasticHQ community group is actively monitored. Feel free to post questions, comments, or
+                suggestions. It is often
+                the speediest response avenue.
+            </p>
+            <a href="https://groups.google.com/d/forum/elastichq" class="btn btn-info">Google
+                Group &raquo;</a>
+        </div>
+        <div class="span6">
+            <h2>Found a Bug?</h2>
+
+            <p>
+                ElasticHQ is hosted on Github. If you find a bug, please create an issue or fork the code and file a
+                pull request.
+            </p>
+            <a href="http://github.com/royrusso/elasticsearch-HQ" class="btn btn-info">GitHub
+                Project &raquo;</a>
+        </div>
+    </div>
+    <hr/>
+    <div class="row-fluid">
+
+        <div class="span12">
+            <h2>Frequently Asked Questions</h2>
+
+            <div style="padding-top: 10px;"></div>
+            <h4>1. What versions of ElasticSearch do you support?</h4>
+
+            <p>The current <i>live</i> code is actively tested on ElasticSearch v.0.90. and ElasticSearch GitHub Master
+                branch. In other words, everything from v0.90 to the latest bleeding-edge that the ES developers are
+                working on, is actively tested.
+                ES versions prior to v.90 have not been tested, and you will see a warning when trying to connect.</p>
+            <h4>2. I can't connect to my ElasticSearch cluster!</h4>
+
+            <p>There are several reasons this can be happening, and here are a few pointers to resolve the issue:</p>
+            <ol>
+                <li> Try to connect to your cluster using your browser... type <code>http://domain:port</code> in your
+                    browser and see what
+                    is returned. If you receive an 'ok' response that looks something like below, then move to
+                    step 2:
+                    <code>
+                        {
+                        ok: true,
+                        status: 200,
+                        name: "Aardwolf",
+                        version: {
+                        number: "0.90.0",
+                        snapshot_build: false
+                        },
+                        tagline: "You Know, for Search"
+                        }
+                    </code>
+                    <br/>
+                    <br/>
+                </li>
+                <li>If you are able to connect using your browser... Are you using the hosted version of
+                    ElasticHQ from http://www.elastichq.org? If so, keep in mind that the request to your ES cluster is
+                    coming from an IP
+                    that is outside of your network. The likely cause is that the IP is blocked. In this case, I suggest
+                    looking at the other <a href="gettingstarted.html">ElasticHQ Installation Options</a>.
+                </li>
+
+            </ol>
+            <hr id="installplugin"/>
+            <h4>3. How do I install ElasticHQ as a plugin?</h4>
+
+            <p>Follow the simple steps outlined here: <a href="support_plugin.html">ElasticHQ Plugin Installation
+                Instructions</a>
+        </div>
+    </div>
+    <hr>
+
+    <div class="footer">
+        <p></p>
+    </div>
+
+    <div class="text-center" style="color:#999999;">
+        <small>
+            &copy; Razorback, LLC 2013. All Rights Reserved.
+            <br/>
+            This website and accompanying ElasticHQ software is not affiliated with ElasticSearch, Inc.
+        </small>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-40876494-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ElasticHQ - ElasticSearch monitoring and management application.">
+    <meta name="author" content="Roy Russo">
+    <title>ElasticHQ Getting Started - ElasticSearch monitoring and management application.</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type='text/css'>
+    <!-- Bootstrap responsive -->
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type='text/css'>
+    <!-- Fontawesome -->
+    <link href="css/font-awesome.css" rel="stylesheet" type='text/css'>
+    <!--  -->
+    <link href="css/elastichq.css" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-ie7.min.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Navbar
+   ================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="features.html">Features</a>
+                    </li>
+                    <li class="active">
+                        <a href="gettingstarted.html" class="">Get Started</a>
+                    </li>
+                    <li>
+                        <a href="support.html" class="">Support</a>
+                    </li>
+                    <li class="">
+                        <a href="blog/" class="">Blog</a>
+                    </li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li><a href="https://groups.google.com/d/forum/elastichq" target="_blank"><i
+                            class="icon-comments-alt"></i> Community</a></li>
+                    <li><a href="https://github.com/royrusso/elasticsearch-HQ" target="_blank"><i
+                            class="icon-github"></i> GitHub Project</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="padding-top: 80px;">
+    <h2>ElasticSearch Monitoring Options</h2>
+
+    <p>ElasticHQ can be easily used as a hosted on-demand monitoring and management tool for Elasticsearch clusters.
+        ElasticHQ can also be installed as a plugin or downloaded and run locally.</p>
+
+    <div class="row-fluid" style="padding-top: 20px;">
+        <div class="span4 well">
+            <div class="pull-left">
+                <a href="app/index.html" class="btn btn-large btn-info"><i class="icon-cloud-download icon-4x"></i></a>
+            </div>
+            <div class="media" style="padding-left: 10px; margin-top: 0px;">
+                <div class="media-body">
+                    <div class="lead" style="margin-bottom: 5px;">In the Cloud</div>
+                    <ul>
+                        <li>Free</li>
+                        <li>No Software Install</li>
+                        <li>Easy-to-Use</li>
+                    </ul>
+                </div>
+            </div>
+            <hr/>
+            <div class="text-center"><a href="app/index.html" class="btn btn-success btn-large">Get Started!</a></div>
+        </div>
+        <div class="span4 well">
+            <div class="pull-left">
+                <a href="support_plugin.html" class="btn btn-large btn-info"><i class="icon-signin icon-4x"></i></a>
+            </div>
+            <div class="media" style="padding-left: 10px; margin-top: 0px;">
+                <div class="media-body">
+                    <div class="lead" style="margin-bottom: 5px;">As a Plugin</div>
+                    <ul>
+                        <li>Easy Install</li>
+                        <li>No Firewall Issues</li>
+                        <li>For Secure Installs</li>
+                    </ul>
+                </div>
+            </div>
+            <hr/>
+            <div class="text-center"><a href="support_plugin.html" class="btn btn-success btn-large">Show me how</a>
+            </div>
+        </div>
+        <div class="span4 well">
+            <div class="pull-left">
+                <a href="https://github.com/royrusso/elasticsearch-HQ/zipball/master" class="btn btn-large btn-info"><i
+                        class="icon-download icon-4x"></i></a>
+            </div>
+            <div class="media" style="padding-left: 10px; margin-top: 0px;">
+                <div class="media-body">
+                    <div class="lead" style="margin-bottom: 5px;">Download/Install</div>
+                    <ul>
+                        <li>Easy Install</li>
+                        <li>Runs Locally</li>
+                        <li>No Firewall Issues</li>
+                    </ul>
+                </div>
+            </div>
+            <hr/>
+            <div class="text-center"><a href="https://github.com/royrusso/elasticsearch-HQ/zipball/master"
+                                        class="btn btn-success btn-large">Start Download</a></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>Which option is right for me?</h3>
+
+    <p>I recommend everyone try the hosted version first, as it is the easiest and quickest to use. If it cannot
+        connect, it is likely due to firewall configurations.
+        Requests will be seen as coming from elastichq.org, and so may be blocked by firewalls. The pointers below are
+        merely pointers: ;-)</p>
+    <h4>Use the Hosted Version if...</h4>
+    <ul>
+        <li>You need to use/test/debug ElasticSearch performance quickly.</li>
+        <li>You don't want to install plugins or download any software.</li>
+        <li>You want to use the latest stable version. (The hosted version is the most rigorously tested)</li>
+    </ul>
+    <h4>Install the Plugin if...</h4>
+    <ul>
+        <li>The hosted version is blocked by a firewall or your ElasticSearch cluster is inaccessible from the outside
+            world.
+        </li>
+        <li>You are comfortable with updating the plugin from time to time.</li>
+        <li>You believe all of this cloud nonsense is just a fad.</li>
+    </ul>
+    <h4>Use the Download distribution if...</h4>
+    <ul>
+        <li>You are testing a local install that is inaccessible to the outside world, ie. elastichq.org</li>
+        <li>You need a local network install that is not coupled to the cluster - like a plugin would be.</li>
+        <li>You are comfortable accessing the HTML and JavaScript from your local directory.</li>
+    </ul>
+
+    <div class="footer">
+        <p></p>
+    </div>
+
+    <div class="text-center" style="color:#999999;">
+        <small>
+            &copy; Razorback, LLC 2013. All Rights Reserved.
+            <br/>
+            This website and accompanying ElasticHQ software is not affiliated with ElasticSearch, Inc.
+        </small>
+    </div>
+
+</div>
+
+<!--
+<a href="https://github.com/royrusso/elasticsearch-HQ" target="_blank"><img
+        style="position: absolute; top: 0; right: 0; border: 0;"
+        src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+-->
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-40876494-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</body>
+</html>
