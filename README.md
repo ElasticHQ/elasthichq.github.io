@@ -1,3 +1,3 @@
 # ElasticHQ Website
 
-wwww.elastichq.org
+www.elastichq.org
