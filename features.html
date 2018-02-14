@@ -143,17 +143,9 @@
                 <img src="img/mappings.png" alt="">
 
                 <div class="carousel-caption">
-                    <h4>Manage your Type Mappings across all of your Indices.</h4>
+                    <h4>View your Type Mappings across all of your Indices.</h4>
                 </div>
             </div>
-            <!--
-                        <div class="item">
-                            <img src="img/diagnostics.png" alt="">
-
-                            <div class="carousel-caption">
-                                <h4>Diagnostics checklist provides helpful hints and solutions to common problems.</h4>
-                            </div>
-                        </div>-->
             <div class="item">
                 <img src="img/diagnostics2.png" alt="">
 
@@ -193,8 +185,8 @@
 
 
                 <div class="media-body">
-                    <p>Actively polls ElasticSearch clusters every 5 seconds, refreshing the screen with the most recent
-                        status information.</p>
+                    <p>Status information is presented as-it-happens, across any of your clusters. Drill down to any
+                        specific Index or Nodes for an in-depth view of all pertinent metrics.</p>
                 </div>
             </div>
             <br>
@@ -214,15 +206,15 @@
             <br>
         </div>
         <div class="span4">
-            <div class="lead section-header"><i class="icon-sitemap pull-left icon-large" style="color: #999999;"></i>
-                Node Monitoring
+            <div class="lead section-header"><i class="icon-share-alt pull-left icon-large" style="color: #999999;"></i>
+                Multi-Cluster Aware
             </div>
             <div class="media">
 
 
                 <div class="media-body">
-                    <p>Actively monitor individual nodes for changes in performance from I/O to Memory usage. It's all
-                        here.</p>
+                    <p>ElasticHQ connects to all of your clusters, regardless of Elasticsearch version, and allows you
+                        to monitor and manage them all from one interface.</p>
                 </div>
             </div>
             <br>
@@ -238,25 +230,26 @@
 
 
                 <div class="media-body">
-                    <p>Refresh, Optimize, Delete, and View Indices Metrics with a simple click of a button... Shard and
+                    <p>Refresh, Optimize, Create, and View Indices and their Metrics with a simple click of a button...
+                        Shard and
                         Alias information included.</p>
                 </div>
             </div>
             <br>
         </div>
-        <div class="span4">
-            <div class="lead section-header"><i class="icon-search pull-left icon-large"
-                                                style="color: #999999;"></i> Search and Query
-            </div>
-            <div class="media">
+        <!--<div class="span4">-->
+        <!--<div class="lead section-header"><i class="icon-search pull-left icon-large"-->
+        <!--style="color: #999999;"></i> Search and Query-->
+        <!--</div>-->
+        <!--<div class="media">-->
 
 
-                <div class="media-body">
-                    <p>Flexible Query feature makes it easy to search your Index or Indices.</p>
-                </div>
-            </div>
-            <br>
-        </div>
+        <!--<div class="media-body">-->
+        <!--<p>Flexible Query feature makes it easy to search your Index or Indices.</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<br>-->
+        <!--</div>-->
         <div class="span4">
             <div class="lead section-header"><i class="icon-code pull-left icon-large" style="color: #999999;"></i> REST
                 API UI
@@ -265,7 +258,22 @@
 
 
                 <div class="media-body">
-                    <p>Stop fighting cURL, REST APIs, and JSON formats. The powerful REST UI does it all for you.</p>
+                    <p>Stop fighting cURL, REST APIs, and JSON formats. The powerful REST UI does it all for you, with
+                        single-click actions.</p>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="span4">
+            <div class="lead section-header"><i class="icon-code-fork pull-left icon-large" style="color: #999999;"></i>
+                Version Agnostic
+            </div>
+            <div class="media">
+
+
+                <div class="media-body">
+                    <p>Supports Elasticsearch versions 2.x, 5.x, 6.x, and whatever the latest branch may be in the
+                        works.</p>
                 </div>
             </div>
             <br>
@@ -302,14 +310,14 @@
         </div>
         <div class="span4">
             <div class="lead section-header"><i class="icon-cloud-upload pull-left icon-large"
-                                                style="color: #999999;"></i> No Software
+                                                style="color: #999999;"></i> Always On
             </div>
             <div class="media">
 
 
                 <div class="media-body">
-                    <p>HQ runs in your browser, allowing you to monitor your ElasticSearch cluster without any software
-                        to install.</p>
+                    <p>Even if some of your clusters go down, ElasticHQ keeps on ticking. It is designed to run 24/7
+                        standalone and not dependent on the health of the clusters it monitors.</p>
                 </div>
             </div>
             <br>
@@ -330,7 +338,20 @@
             </div>
             <br>
         </div>
+
         <div class="span4">
+            <div class="lead section-header"><i class="icon-sitemap pull-left icon-large" style="color: #999999;"></i>
+                Node Monitoring
+            </div>
+            <div class="media">
+
+
+                <div class="media-body">
+                    <p>Actively monitor individual nodes for changes in performance from I/O to Memory usage. It's all
+                        here.</p>
+                </div>
+            </div>
+            <br>
         </div>
         <div class="span4">
         </div>
@@ -346,9 +367,9 @@
 
     <div class="text-center" style="color:#999999;">
         <small>
-            &copy; Razorback, LLC 2013. All Rights Reserved.
+            &copy; Razorback, LLC 2013-2018. All Rights Reserved.
             <br/>
-            This website and accompanying ElasticHQ software is not affiliated with ElasticSearch, Inc.
+            This website and accompanying ElasticHQ software is not affiliated with Elastic, Inc.
         </small>
     </div>
 
@@ -356,9 +377,9 @@
 
 <script type="text/javascript">
     $(document).ready(
-            function ($) {
-                $('#myCarousel').carousel();
-            });
+        function ($) {
+            $('#myCarousel').carousel();
+        });
 </script>
 
 <script type="text/javascript">

@@ -76,8 +76,8 @@
         <div class="span6">
             <h2>Comments / Questions?</h2>
 
-            <p>The ElasticHQ community group is actively monitored. Feel free to post questions, comments, or
-                suggestions. It is often
+            <p>Feel free to post questions, comments, or
+                suggestions to the ElasticHQ community. It is often
                 the speediest response avenue.
             </p>
             <a href="https://groups.google.com/d/forum/elastichq" class="btn btn-info">Google
@@ -103,10 +103,9 @@
             <div style="padding-top: 10px;"></div>
             <h4>1. What versions of ElasticSearch do you support?</h4>
 
-            <p>The current <i>live</i> code is actively tested on ElasticSearch v.0.90. and ElasticSearch GitHub Master
-                branch. In other words, everything from v0.90 to the latest bleeding-edge that the ES developers are
-                working on, is actively tested.
-                ES versions prior to v.90 have not been tested, and you will see a warning when trying to connect.</p>
+            <p>ElasticHQ is actively tested on ElasticSearch v2.x, v5.x, v6.x, and latest ElasticSearch GitHub stable
+                branch. In other words, everything from v2.x to the latest bleeding-edge that the ES developers are
+                working on, is actively tested.</p>
             <h4>2. I can't connect to my ElasticSearch cluster!</h4>
 
             <p>There are several reasons this can be happening, and here are a few pointers to resolve the issue:</p>
@@ -130,19 +129,17 @@
                     <br/>
                     <br/>
                 </li>
-                <li>If you are able to connect using your browser... Are you using the hosted version of
-                    ElasticHQ from http://www.elastichq.org? If so, keep in mind that the request to your ES cluster is
-                    coming from an IP
-                    that is outside of your network. The likely cause is that the IP is blocked. In this case, I suggest
-                    looking at the other <a href="gettingstarted.html">ElasticHQ Installation Options</a>.
+                <li>If you are unable to see your ES cluster running, please open a <a href="https://github.com/ElasticHQ/elasticsearch-HQ" target="_blank">github issue</a> with as much information as possible so we can diagnose the problem.
+                    <a href="gettingstarted.html">ElasticHQ Installation Options</a>.
                 </li>
 
             </ol>
-            <hr id="installplugin"/>
             <h4>3. How do I install ElasticHQ as a plugin?</h4>
 
-            <p>Follow the simple steps outlined here: <a href="support_plugin.html">ElasticHQ Plugin Installation
-                Instructions</a>
+            <p>You can't. Plugin support has been discontinued for various reasons... mainly that HQ doesn't want to tie itself to the failure of one ES node nor tightly bind to Elastic's plugin APIs.
+            <h4>4. We are an Elasticsearch hosting company and would like to offer ElasticHQ to our customers.</h4>
+
+            <p>Feel free, and please let us know, so we can add you to our ES hosts page.
         </div>
     </div>
     <hr>
@@ -153,9 +150,9 @@
 
     <div class="text-center" style="color:#999999;">
         <small>
-            &copy; Razorback, LLC 2013. All Rights Reserved.
+            &copy; Razorback, LLC 2013-2018. All Rights Reserved.
             <br/>
-            This website and accompanying ElasticHQ software is not affiliated with ElasticSearch, Inc.
+            This website and accompanying ElasticHQ software is not affiliated with Elastic, Inc.
         </small>
     </div>
 

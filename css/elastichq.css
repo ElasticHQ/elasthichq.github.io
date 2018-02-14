@@ -136,7 +136,7 @@ body {
 -------------------------------------------------- */
 
 body > .navbar {
-    font-size: 13px;
+    font-size: 16px;
 }
 
 /* Change the docs' brand */
@@ -156,6 +156,41 @@ body > .navbar .brand {
 body > .navbar .brand:hover {
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .4);
+}
+
+body > .navbar .nav li a {
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+body > .navbar .nav li a:hover {
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #246d86;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .4);
+}
+
+.navbar-inverse .navbar-inner {
+    background-color: #2f96b4 !important;
+    border-color: #FFFFFF;
+    background-image: linear-gradient(to bottom, #2f96b4, #2f96b4);
+}
+
+.navbar-inverse .nav .active > a {
+    background-color: #FFFFFF;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .4);
+    color: #2f96b4;
+}
+
+.navbar-inverse .nav .active > a:hover {
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #246d86;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .4);
+
 }
 
 /* Sections
@@ -197,20 +232,17 @@ hr.soften {
     border-bottom: 1px solid #eee;
 }
 
-
-.stats td
-{
+.stats td {
     font-size: larger;
 }
-.stats td.max
-{
+
+.stats td.max {
     font-weight: bold;
     /*color: green;*/
     text-align: right;
 }
 
-.stats td.avg
-{
+.stats td.avg {
     font-weight: normal;
     /*color: green;*/
     text-align: right;
@@ -220,4 +252,3 @@ hr.soften {
     margin: 0 auto !important;
     float: none !important;
 }
-
