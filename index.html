@@ -1,253 +1,392 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>ElasticHQ - Elasticsearch Management and Monitoring</title>
     <meta name="description" content="ElasticHQ - ElasticSearch monitoring and management application.">
-    <meta name="author" content="Roy Russo">
-    <title>ElasticHQ - ElasticSearch monitoring and management application.</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type='text/css'>
-    <!-- Bootstrap responsive -->
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type='text/css'>
-    <!-- Fontawesome -->
-    <link href="css/font-awesome.css" rel="stylesheet" type='text/css'>
-    <!--  -->
-    <link href="css/elastichq.css" rel="stylesheet" type='text/css'>
-    <link rel="stylesheet" type="text/css" href="css/font-awesome-ie7.min.css">
+    <link rel="shortcut icon" href="img/favicon.png">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- CSS -->
+    <link href="css/preload.css" rel="stylesheet">
 
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-switch.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/slidebars.min.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet">
+    <link href="css/jquery.bxslider.css" rel="stylesheet">
+    <link href="css/buttons.css" rel="stylesheet">
+    <link href="css/syntaxhighlighter/shCore.css" rel="stylesheet">
+
+    <!-- RS5.0 Stylesheet -->
+    <!--<link rel="stylesheet" type="text/css" href="css/settings.css">
+    <link rel="stylesheet" type="text/css" href="css/layers.css">
+    <link rel="stylesheet" type="text/css" href="css/navigation.css">-->
+
+    <link href="css/style-blue.css" rel="stylesheet" title="default">
+    <link href="css/width-full.css" rel="stylesheet" title="default">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #mc_embed_signup {
+            clear: left;
+            font: 14px Helvetica, Arial, sans-serif;
+            width: 100%;
+        }
+
+        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40876494-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-40876494-1');
+    </script>
+
 </head>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
 <body>
 
-<!-- Navbar
-   ================================================== -->
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+<div class="sb-site-container">
+<div class="boxed">
+
+
+<nav class="navbar navbar-static-top navbar-default yamm navbar-static-top" role="navigation" id="header">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
             </button>
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <li class="active">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="features.html">Features</a>
-                    </li>
-                    <li>
-                        <a href="gettingstarted.html" class="">Get Started</a>
-                    </li>
-                    <li>
-                        <a href="support.html" class="">Support</a>
-                    </li>
-                </ul>
-                <ul class="nav pull-right">
-                    <li><a href="https://groups.google.com/d/forum/elastichq" target="_blank"><i
-                            class="icon-comments-alt"></i> Community</a></li>
-                    <li><a href="https://github.com/royrusso/elasticsearch-HQ" target="_blank"><i
-                            class="icon-github"></i> GitHub Project</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+            <a id="ar-brand" class="navbar-brand active" href="index.html">Elastic<span>HQ</span></a>
+        </div> <!-- navbar-header -->
 
-<div class="container" style="padding-top: 10px;">
-    <!-- Jumbotron -->
-    <div class="jumbotron">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="features.html">Features</a></li>
+                <li><a href="gettingstarted.html">Getting Started</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://github.com/ElasticHQ/elasticsearch-HQ" target="_blank"><i class="fa fa-github"></i></a>
+                </li>
+            </ul>
+        </div><!-- navbar-collapse -->
+    </div><!-- container -->
+</nav>
+<!--wrap-polygons -->
+<header class="ar-intro-product">
+    <div class="container text-center">
+
         <div class="row">
-            <div class="span6">
-                <h1>Elastic HQ</h1>
+            <div class="col-md-12">
+                <div class="title-logo animated fadeInDown animation-delay-5">Elastic<span>HQ</span></div>
+                <p class="slogan text-center margin-bottom"><span>Management</span> and <span>Monitoring</span> for
+                    Elasticsearch.</p>
+                <div class="btn-polygon">
+                    <a href="gettingstarted.html" class="btn btn-ar btn-lg btn-primary"><i class="fa fa-download"></i>Get
+                        Started</a>
+                    <a href="features.html" class="btn btn-ar btn-lg btn-success"><i class="fa fa-list"></i>Features</a>
+                </div>
 
-                <p class="lead">Sleek, intuitive, and powerful ElasticSearch Management and Monitoring.</p>
-                <a class="btn btn-large btn-success" href="gettingstarted.html">Get Started</a>
-                <a class="btn btn-large btn-info" href="features.html">Features</a>
-                <br/>
-
+                <img src="img/elastichq.png" alt="" class="wow fadeInUp animation-delay-4  aligncenter ">
             </div>
-            <div class="span4">
-                <img alt="" src="img/screenie.png" class="pull-right"/>
-            </div>
-
-        </div>
-    </div>
-
-    <!--<div class="bs-docs-social">-->
-        <!--<ul class="masthead-links" style="padding-top: 0px;">-->
-
-            <!--<li><a href="http://github.com/royrusso/elasticsearch-HQ" target="_blank">GitHub project</a></li>-->
-            <!--<li class="muted">&middot;</li>-->
-            <!--<li><a href="https://twitter.com/ElasticHQ" target="_blank">@ElasticHQ</a></li>-->
-            <!--<li class="muted">&middot;</li>-->
-            <!--<li><a href="support.html">Support</a></li>-->
-            <!--&lt;!&ndash;<li class="muted">&middot;</li>&ndash;&gt;-->
-            <!--&lt;!&ndash;<li>&ndash;&gt;-->
-            <!--&lt;!&ndash;<a href="elasticsearchstats.php">ElasticSearch Stats</a>&ndash;&gt;-->
-            <!--&lt;!&ndash;</li>&ndash;&gt;-->
-        <!--</ul>-->
-    <!--</div>-->
-
-    <hr/>
-
-    <div class="bs-docs-social">
-
-        <ul class="bs-docs-social-buttons">
-            <li>
-                <a class="github-button" href="https://github.com/elastichq/elasticsearch-HQ" data-size="large"
-                   data-show-count="true" aria-label="Star elastichq/elasticsearch-HQ on GitHub">Star</a></li>
-            <li>
-                <a class="github-button" href="https://github.com/elastichq/elasticsearch-HQ/subscription"
-                   data-size="large" data-show-count="true" aria-label="Watch elastichq/elasticsearch-HQ on GitHub">Watch</a>
-            </li>
-            <li>
-                <a class="github-button" href="https://github.com/elastichq/elasticsearch-HQ/fork" data-size="large"
-                   data-show-count="true" aria-label="Fork elastichq/elasticsearch-HQ on GitHub">Fork</a></li>
-        </ul>
+        </div> <!-- row -->
 
     </div>
+</header>
 
-    <div class="row-fluid marketing">
-        <div class="span12">
-            <div class="span3">
-                <img src="img/pngicons/polls256.png">
-            </div>
-            <div class="span9">
-
-                <h3>Real-Time Monitoring</h3>
-
-                <p>From monitoring individual cluster nodes, to viewing real-time threads, ElasticHQ enables
-                    insight in to ElasticSearch cluster runtime metrics and configurations.
-                    ElasticHQ's real-time update feature works by querying your ElasticSearch cluster
-                    for up to date analytics,
-                    always pulling the latest aggregate
-                    information and deltas; keeping you up-to-date with the internals of your working cluster.</p>
-                <a href="features.html" class="btn pull-right">Features <i class="icon-double-angle-right"></i></a>
+<section class="section-lines">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 padding-40">
+                <p class="slogan text-center no-margin">ElasticHQ is an open source application that offers a
+                    simplified interface for <span>managing</span> and <span>monitoring</span>
+                    <strong>Elasticsearch</strong> clusters.</p>
             </div>
         </div>
     </div>
-    <hr/>
-    <div class="row-fluid marketing">
-        <div class="span12">
+</section>
 
-            <div class="span9">
-                <h3>Full Cluster Management</h3>
-
-                <p>Elastic HQ gives you complete control over your ElasticSearch <b>clusters</b>, nodes, indexes, and mappings.
-                    The
-                    sleek, intuitive UI gives you all the power of the ElasticSearch Admin API, without having to tangle
-                    with REST and large cumbersome JSON requests and responses.</p>
-                <a href="features.html" class="btn pull-right">Features <i class="icon-double-angle-right"></i></a>
+<div class="container">
+    <section class="margin-bottom">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="right-line">Key Features</h2>
             </div>
-            <div class="span3">
-                <img src="img/pngicons/question-type-one-correct256.png">
+            <div class="col-md-4 col-sm-6">
+                <div class="text-icon wow fadeInUp">
+                    <span class="icon-ar icon-ar-lg"><i class="fa fa-dashboard"></i></span>
+                    <div class="text-icon-content">
+                        <h3 class="no-margin">Real-Time Monitoring</h3>
+                        <p>From monitoring individual cluster nodes, to viewing real-time threads, ElasticHQ enables
+                            insight in to ElasticSearch cluster runtime metrics and configurations. ElasticHQ's
+                            websocket data streams keep you up-to-date with the internals of your working
+                            cluster.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="text-icon wow fadeInUp">
+                    <span class="icon-ar icon-ar-lg"><i class="fa fa-wrench"></i></span>
+                    <div class="text-icon-content">
+                        <h3 class="no-margin">Full Cluster Management</h3>
+                        <p>Elastic HQ gives you complete control over your ElasticSearch clusters, nodes, indexes,
+                            and mappings. The sleek, intuitive UI gives you all the power of the ElasticSearch Admin
+                            API, without having to tangle with REST and large cumbersome JSON requests and
+                            responses.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="text-icon wow fadeInUp">
+                    <span class="icon-ar icon-ar-lg"><i class="glyphicon glyphicon-signal"></i></span>
+                    <div class="text-icon-content">
+                        <h3 class="no-margin">Full Cluster Monitoring</h3>
+                        <p>Easily find what you're looking for by analyzing a specific Index or Node. ElasticHQ
+                            provides a complete interface, along with all of the other Administration UI features.
+                            All statistics exposed by Elasticsearch are accessible within the UI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="text-icon wow fadeInUp">
+                    <span class="icon-ar icon-ar-lg"><i class="fa fa-code-fork"></i></span>
+                    <div class="text-icon-content">
+                        <h3 class="no-margin">Elasticsearch Version Agnostic</h3>
+                        <p>ElasticHQ supports all major version of Elasticsearch from version 2.x, 5.x, 6.x, and
+                            above. ElasticHQ tests against all major versions regularly to maintain
+                            compatibility.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="text-icon wow fadeInUp">
+                    <span class="icon-ar icon-ar-lg"><i class="fa fa-power-off"></i></span>
+                    <div class="text-icon-content">
+                        <h3 class="no-margin">Easy Install - Always On</h3>
+                        <p>ElasticHQ is easy to install and is accessible from your browser, allowing you to manage
+                            and monitor your ElasticSearch clusters from anywhere at any time. ElasticHQ can be
+                            installed in just 2 commands and will remain running until shutdown.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="text-icon wow fadeInUp">
+                    <span class="icon-ar icon-ar-lg"><i class="fa fa-search"></i></span>
+                    <div class="text-icon-content">
+                        <h3 class="no-margin">Works with X-Pack</h3>
+                        <p>ElasticHQ is easy to install and is accessible from your browser, allowing you to manage
+                            and monitor your ElasticSearch clusters from anywhere at any time. ElasticHQ can be
+                            installed in just 2 commands and will remain running until shutdown.</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- row -->
+    </section>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="content-box box-default">
+                    <span class="icon-ar icon-ar-lg icon-ar-inverse icon-ar-circle"><i class="fa fa-beer"></i></span>
+                    <h5 class="content-box-title">Real Open Source</h5>
+                    <p>Distributed under the Apache License, Version 2, there are no complicated EULAs when using,
+                        extending, or re-distributing.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="content-box box-default">
+                    <span class="icon-ar icon-ar-lg icon-ar-inverse icon-ar-circle"><i class="fa fa-cloud"></i></span>
+                    <h5 class="content-box-title">Cloud-Ready</h5>
+                    <p>ElasticHQ is easily deployed to AWS, Azure, and any other cloud provider in binary form or as
+                        a
+                        docker container.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="content-box box-default">
+                    <span class="icon-ar icon-ar-lg icon-ar-inverse icon-ar-circle"><i class="fa fa-bank"></i></span>
+                    <h5 class="content-box-title">Fortune 500</h5>
+                    <p>The most popular monitoring and management interface for Elasticsearch is used by Fortune 500
+                        companies all over the world daily.</p>
+                </div>
             </div>
         </div>
     </div>
-    <hr/>
-    <div class="row-fluid marketing">
-        <div class="span12">
-
-            <div class="span3">
-                <img src="img/pngicons/Monitoring256.png">
-            </div>
-            <div class="span9">
-                <h3>Full Cluster Monitoring</h3>
-
-                <p>Easily find what you're looking for by analyzing a specific Index or Node.
-                    ElasticHQ
-                    provides a complete interface, along with all of the other Administration UI features. All
-                    statistics exposed by
-                    Elasticsearch are accessible within the UI.</p>
-                <a href="features.html" class="btn pull-right">Features <i class="icon-double-angle-right"></i></a>
+    <hr class="color dotted">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 padding-40">
+                <p class="lead lead-lg">ElasticHQ gives you full control and complete insight in to all of your
+                    Elasticsearch
+                    environments. Whether you want to live-stream important JVM, OS, and filesystem metrics or
+                    create and reindex indices, ElasticHQ provides an all-in-one management and monitoring
+                    solution.</p>
+                <div class="btn-polygon text-center">
+                    <a href="gettingstarted.html" class="btn btn-ar btn-lg btn-primary"><i class="fa fa-download"></i>Get
+                        Started</a>
+                    <a href="features.html" class="btn btn-ar btn-lg btn-success"><i class="fa fa-list"></i>Features</a>
+                </div>
             </div>
         </div>
-    </div>
-    <hr/>
-    <div class="row-fluid marketing">
-        <div class="span12">
-            <div class="span9">
-                <h3>Elasticsearch Version Agnostic</h3>
+    </div> <!-- container -->
+</div> <!-- container -->
 
-                <p>ElasticHQ supports all major version of Elasticsearch from version 2.x, 5.x, 6.x, and above.
-                    ElasticHQ tests against all major versions regularly to maintain compatibility.</p>
-                <a href="features.html" class="btn pull-right">Features <i class="icon-double-angle-right"></i></a>
+<aside id="footer-widgets">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="footer-widget-title">Sitemap</h3>
+                <ul class="list-unstyled three_cols">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="gettingstarted.html">Get Started</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="http://docs.elastichq.org/" target="_blank">Documentation</a></li>
+                    <li><a href="https://github.com/ElasticHQ/elasticsearch-HQ" target="_blank">Github</a></li>
+                    <li><a href="https://hub.docker.com/r/elastichq/elasticsearch-hq" target="_blank">Dockerhub</a></li>
+                </ul>
             </div>
-            <div class="span3">
-                <img src="img/pngicons/Accept256.png">
+            <div class="col-md-6">
+<!--
+                <h3 class="footer-widget-title">Subscribe</h3>
+                <p>Sign up for the ElasticHQ newsletter, and stay connected with important updates.</p>
+                <div id="mc_embed_signup">
+                    <form action="https://elastichq.us12.list-manage.com/subscribe/post?u=df28ea895f8a8ef1d26e1cb53&amp;id=26227d1523"
+                          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                          class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
+                                   placeholder="email address" required>
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                                                                                      name="b_df28ea895f8a8ef1d26e1cb53_26227d1523"
+                                                                                                      tabindex="-1"
+                                                                                                      value=""></div>
+                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe"
+                                                      id="mc-embedded-subscribe" class="btn btn-ar btn-primary"></div>
+                        </div>
+                    </form>
+                </div>
+-->
+                <!--End mc_embed_signup-->
             </div>
-        </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</aside> <!-- footer-widgets -->
+<footer id="footer">
+    <p>&copy; 2018 Roy Russo. All rights reserved.</p>
+    <p>We are not affiliated with <a href="https://www.elastic.co/" target="_blank">Elastic, Inc.</a> Elasticsearch is a
+        trademark of Elasticsearch BV, registered in the U.S.
+        and in other countries.</p>
+</footer>
+
+</div> <!-- boxed -->
+</div> <!-- sb-site -->
+
+<div class="sb-slidebar sb-right sb-style-overlay">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+        </span>
+    </div><!-- /input-group -->
+
+    <h2 class="slidebar-header no-margin-bottom">Navigation</h2>
+    <ul class="slidebar-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="portfolio_topbar.html">Portfolio</a></li>
+        <li><a href="page_about3.html">About us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="page_contact.html">Contact</a></li>
+    </ul>
+
+    <h2 class="slidebar-header">Social Media</h2>
+    <div class="slidebar-social-icons">
+        <a href="#" class="social-icon-ar rss"><i class="fa fa-rss"></i></a>
+        <a href="#" class="social-icon-ar facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="social-icon-ar twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="social-icon-ar pinterest"><i class="fa fa-pinterest"></i></a>
+        <a href="#" class="social-icon-ar instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="social-icon-ar wordpress"><i class="fa fa-wordpress"></i></a>
+        <a href="#" class="social-icon-ar linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="social-icon-ar flickr"><i class="fa fa-flickr"></i></a>
+        <a href="#" class="social-icon-ar vine"><i class="fa fa-vine"></i></a>
+        <a href="#" class="social-icon-ar dribbble"><i class="fa fa-dribbble"></i></a>
     </div>
-    <hr/>
-    <div class="row-fluid marketing">
-        <div class="span12">
-            <div class="span3">
-                <img src="img/pngicons/wizard256.png">
-            </div>
-            <div class="span9">
-                <h3>Easy Install - Always On</h3>
-
-                <p>ElasticHQ is easy to install and is accessible from your browser, allowing you to manage and
-                    monitor
-                    your ElasticSearch clusters from anywhere at any time. ElasticHQ can be installed in just 2 commands and will remain running until shutdown.</p>
-                <a href="features.html" class="btn pull-right">Features <i class="icon-double-angle-right"></i></a>
-            </div>
-        </div>
-    </div>
-
-    <hr>
-
-    <div class="footer">
-        <p></p>
-    </div>
-
-    <div class="text-center" style="color:#999999;">
-        <small>
-            &copy; Razorback, LLC 2013-2018. All Rights Reserved.
-            <br/>
-            This website and accompanying ElasticHQ software is not affiliated with Elastic, Inc.
-        </small>
-    </div>
-
+</div> <!-- sb-slidebar sb-right -->
+<div id="back-top">
+    <a href="#header"><i class="fa fa-chevron-up"></i></a>
 </div>
 
-<!--
-<a href="https://github.com/royrusso/elasticsearch-HQ" target="_blank"><img
-        style="position: absolute; top: 0; right: 0; border: 0;"
-        src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
--->
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-switch.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/slidebars.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/holder.js"></script>
+<script src="js/buttons.js"></script>
+<script src="js/jquery.mixitup.min.js"></script>
+<script src="js/circles.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/jquery.matchHeight-min.js"></script>
+<script src="js/DropdownHover.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
 
-<script type="text/javascript">
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-40876494-1']);
-    _gaq.push(['_trackPageview']);
+<!--<script type="text/javascript" src="js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+<script type="text/javascript" src="js/jquery.themepunch.revolution.min.js?rev=5.0"></script>-->
 
-    (function () {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
 
-</script>
+<script src="js/styleswitcher.js"></script>
 
-<script>
-    $(document).ready(function () {
-        $("[rel=tipRight]").tooltip();
-    });
-</script>
+<!-- Syntaxhighlighter -->
+<script src="js/syntaxhighlighter/shCore.js"></script>
+<script src="js/syntaxhighlighter/shBrushXml.js"></script>
+<script src="js/syntaxhighlighter/shBrushJScript.js"></script>
 
+<script src="js/DropdownHover.js"></script>
+<script src="js/app.js"></script>
+<script src="js/holder.js"></script>
 
 </body>
+
 </html>
